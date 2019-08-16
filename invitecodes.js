@@ -1,6 +1,6 @@
 const Hashids = require('hashids');
 const binarySearch = require('array-binarysearch');
-var hashids = new Hashids("we are qyre", 8, "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890");
+var hashids = new Hashids("this is salt", 8, "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890");
 
 const numbers = [];
 for(let i = 0; i < 1000000; i++) {
