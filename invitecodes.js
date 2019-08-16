@@ -2,6 +2,7 @@ const Hashids = require('hashids');
 const binarySearch = require('array-binarysearch');
 var hashids = new Hashids("this is salt", 8, "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890");
 
+// Initialize numbers array
 const numbers = [];
 for(let i = 0; i < 1000000; i++) {
   numbers.push(i);
@@ -19,6 +20,7 @@ encoded.forEach( (code) => {
   decoded.push(decodeValue[0]);
 })
 
+// Check for duplicates. Have to be none.
 encoded.sort()
 const res = binarySearch(encoded, (a,b) => {
   if (a === b) {
